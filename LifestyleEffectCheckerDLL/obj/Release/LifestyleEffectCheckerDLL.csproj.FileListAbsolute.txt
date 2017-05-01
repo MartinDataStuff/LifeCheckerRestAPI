@@ -1,0 +1,10 @@
+C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerDLL\bin\Release\LifestyleEffectCheckerDLL.dll.config
+C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerDLL\bin\Release\LifestyleEffectCheckerDLL.dll
+C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerDLL\bin\Release\LifestyleEffectCheckerDLL.pdb
+C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerDLL\bin\Release\EntityFramework.dll
+C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerDLL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerDLL\bin\Release\EntityFramework.xml
+C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerDLL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerDLL\obj\Release\LifestyleEffectCheckerDLL.csprojResolveAssemblyReference.cache
+C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerDLL\obj\Release\LifestyleEffectCheckerDLL.dll
+C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerDLL\obj\Release\LifestyleEffectCheckerDLL.pdb
