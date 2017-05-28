@@ -54,6 +54,7 @@ C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCh
 C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerRestAPI\bin\System.Web.WebPages.Razor.dll
 C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerRestAPI\bin\WebGrease.dll
 C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerRestAPI\bin\LifestyleEffectCheckerDLL.pdb
+C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerRestAPI\bin\LifestyleEffectCheckerDLL.dll.config
 C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerRestAPI\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerRestAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerRestAPI\bin\Microsoft.AI.Web.xml

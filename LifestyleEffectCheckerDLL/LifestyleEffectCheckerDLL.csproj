@@ -51,22 +51,14 @@
   <ItemGroup>
     <Compile Include="Context\LifestyleCheckerContext.cs" />
     <Compile Include="Entity\AbstractBaseObject.cs" />
-    <Compile Include="Entity\Action\Action.cs" />
-    <Compile Include="Entity\Action\ActionPart.cs" />
-    <Compile Include="Entity\Action\PartInformation.cs" />
-    <Compile Include="Entity\Effect\Effect.cs" />
-    <Compile Include="Entity\Effect\EffectParameter.cs" />
+    <Compile Include="Entity\PartInformation.cs" />
     <Compile Include="Entity\Journal.cs" />
     <Compile Include="Entity\MyGeoPosition.cs" />
     <Compile Include="Entity\Parameter.cs" />
     <Compile Include="Facade\RepositoryFacade.cs" />
     <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\Action\ActionPartRepository.cs" />
-    <Compile Include="Repository\Action\ActionRepository.cs" />
-    <Compile Include="Repository\Action\PartInformationRepository.cs" />
-    <Compile Include="Repository\Effect\EffectParameterRepository.cs" />
-    <Compile Include="Repository\Effect\EffectRepository.cs" />
+    <Compile Include="Repository\PartInformationRepository.cs" />
     <Compile Include="Repository\JournalRepository.cs" />
   </ItemGroup>
   <ItemGroup />

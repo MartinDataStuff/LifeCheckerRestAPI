@@ -1,48 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LifestyleEffectCheckerDLL.Context;
+using LifestyleEffectCheckerDLL.Entity;
 using LifestyleEffectCheckerDLL.Interface;
 
-namespace LifestyleEffectCheckerDLL.Repository.Effect
+namespace LifestyleEffectCheckerDLL.Repository
 {
-    class EffectRepository : IRepository<Entity.Effect.Effect>
+    class PartInformationRepository : IRepository<PartInformation>
     {
-        public Entity.Effect.Effect Create(Entity.Effect.Effect item)
+        public PartInformation Create(PartInformation item)
         {
             using (var db = new LifestyleCheckerContext())
             {
-                if (db.Effects == null)
+                if (db.PartInformations == null)
                     return null;
-                db.Effects.Add(item);
+
+
+                item.Journal = db.Journals.Include(journal => journal.PartInformations).FirstOrDefault(journal => journal.Id == item.Journal.Id);
+
+                db.PartInformations.Add(item);
                 db.SaveChanges();
                 return item;
             }
         }
 
-        public Entity.Effect.Effect Read(int id)
+        public PartInformation Read(int id)
         {
             using (var db = new LifestyleCheckerContext())
             {
-                return db.Effects.Include(effect => effect.EffectParameters).FirstOrDefault(effect => effect.Id == id);
+                return db.PartInformations.Include(journal => journal.Journal).FirstOrDefault(schoolEvent => schoolEvent.Id == id);
             }
         }
 
-        public List<Entity.Effect.Effect> ReadAll()
+        public List<PartInformation> ReadAll()
         {
             using (var db = new LifestyleCheckerContext())
             {
-                if (db.Effects != null)
-                    return db.Effects.Include(effect => effect.EffectParameters).ToList();
-                return new List<Entity.Effect.Effect>();
+                if (db.PartInformations != null)
+                    return db.PartInformations.Include(partInformation => partInformation.Journal).ToList();
+
+                return new List<PartInformation>();
             }
         }
-    
 
-        public Entity.Effect.Effect Update(Entity.Effect.Effect item)
+        public PartInformation Update(PartInformation item)
         {
             using (var db = new LifestyleCheckerContext())
             {
@@ -52,7 +54,7 @@ namespace LifestyleEffectCheckerDLL.Repository.Effect
             }
         }
 
-        public bool Delete(Entity.Effect.Effect item)
+        public bool Delete(PartInformation item)
         {
             using (var db = new LifestyleCheckerContext())
             {

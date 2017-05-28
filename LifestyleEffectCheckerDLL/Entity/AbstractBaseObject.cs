@@ -9,7 +9,7 @@ namespace LifestyleEffectCheckerDLL.Entity
     public class AbstractBaseObject
     {
         public int Id { get; set; }
-        public DateTime TimeStamp { get; set; }
+        public DateTime TimeStamp { get; set; } = DateTime.Now;
 
         public string Name { get; set; }
     }

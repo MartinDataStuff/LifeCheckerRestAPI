@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using LifestyleEffectCheckerDLL.Context;
-using LifestyleEffectCheckerDLL.Entity.Action;
+using LifestyleEffectCheckerDLL.Entity;
 using LifestyleEffectCheckerDLL.Facade;
 using LifestyleEffectCheckerDLL.Interface;
 
-namespace LifestyleEffectCheckerRestAPI.Controllers.Action
+namespace LifestyleEffectCheckerRestAPI.Controllers
 {
     public class PartInformationsController : ApiController
     {

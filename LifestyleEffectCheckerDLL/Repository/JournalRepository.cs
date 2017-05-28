@@ -18,6 +18,10 @@ namespace LifestyleEffectCheckerDLL.Repository
             {
                 if (db.Journals == null)
                     return null;
+                foreach (var partInformation in item.PartInformations)
+                {
+                    db.Entry(partInformation).State = EntityState.Unchanged;
+                }
                 db.Journals.Add(item);
                 db.SaveChanges();
                 return item;
@@ -28,7 +32,7 @@ namespace LifestyleEffectCheckerDLL.Repository
         {
             using (var db = new LifestyleCheckerContext())
             {
-                return db.Journals.Include(journal => journal.Actions).FirstOrDefault(journal => journal.Id == id);
+                return db.Journals.Include(journal => journal.PartInformations).FirstOrDefault(journal => journal.Id == id);
             }
         }
 
@@ -37,7 +41,7 @@ namespace LifestyleEffectCheckerDLL.Repository
             using (var db = new LifestyleCheckerContext())
             {
                 if (db.Journals != null)
-                    return db.Journals.Include(journal => journal.Actions).ToList();
+                    return db.Journals.Include(journal => journal.PartInformations).ToList();
                 return new List<Journal>();
             }
         }

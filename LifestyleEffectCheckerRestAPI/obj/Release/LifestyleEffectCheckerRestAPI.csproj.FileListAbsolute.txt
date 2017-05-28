@@ -90,3 +90,4 @@ C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCh
 C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerRestAPI\obj\Release\LifestyleEffectCheckerRestAPI.csprojResolveAssemblyReference.cache
 C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerRestAPI\obj\Release\LifestyleEffectCheckerRestAPI.dll
 C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerRestAPI\obj\Release\LifestyleEffectCheckerRestAPI.pdb
+C:\Users\Martin\Documents\GitHub\LifestyleEffectCheckerRestAPI\LifestyleEffectCheckerRestAPI\bin\LifestyleEffectCheckerDLL.dll.config

@@ -8,7 +8,7 @@ namespace LifestyleEffectCheckerDLL.Entity
 {
     public class Journal : AbstractBaseObject
     {
-        
-        public List<Action.Action> Actions { get; set; } = new List<Action.Action>();
+
+        public List<PartInformation> PartInformations { get; set; } = new List<PartInformation>();
     }
 }

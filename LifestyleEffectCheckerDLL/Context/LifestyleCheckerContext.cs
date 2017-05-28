@@ -5,8 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LifestyleEffectCheckerDLL.Entity;
-using LifestyleEffectCheckerDLL.Entity.Action;
-using LifestyleEffectCheckerDLL.Entity.Effect;
 
 namespace LifestyleEffectCheckerDLL.Context
 {
@@ -18,11 +16,7 @@ namespace LifestyleEffectCheckerDLL.Context
         }
 
         public DbSet<Journal> Journals { get; set; }
-        public DbSet<ActionPart> ActionParts { get; set; }
-        public DbSet<Entity.Action.Action> Actions { get; set; }
         public DbSet<PartInformation> PartInformations { get; set; }
-        public DbSet<EffectParameter> EffectParameters { get; set; }
-        public DbSet<Effect> Effects { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -32,9 +26,9 @@ namespace LifestyleEffectCheckerDLL.Context
             //    .WithMany(product => product.OrderLists);
 
             ////SchoolEvent has 1 Schedule. Schedule has many SchoolEvents.
-            //modelBuilder.Entity<SchoolEvent>()
-            //    .HasOptional<Schedule>(schoolEvent => schoolEvent.Schedule)
-            //    .WithMany(schedule => schedule.SchoolEvents);
+            modelBuilder.Entity<PartInformation>()
+                .HasOptional<Journal>(partInformation => partInformation.Journal)
+                .WithMany(journal => journal.PartInformations);
 
             base.OnModelCreating(modelBuilder);
         }
@@ -44,6 +38,17 @@ namespace LifestyleEffectCheckerDLL.Context
     {
         protected override void Seed(LifestyleCheckerContext context)
         {
+            Journal journal1 = context.Journals.Add(new Journal { Name = "McMenu" });
+            var partInformations1 = context.PartInformations.Add(new PartInformation { Name = "Burger", Journal = journal1, MeasuringMethod = MeasuringMethod.Number });
+            partInformations1.SetValue(5);
+            var partInformations2 = context.PartInformations.Add(new PartInformation { Name = "Salat", Journal = journal1, MeasuringMethod = MeasuringMethod.Text });
+            partInformations2.SetValue("Smagte for sødt");
+
+            Journal journal2 = context.Journals.Add(new Journal { Name = "Motion" });
+            context.PartInformations.Add(new PartInformation { Name = "Løb", Journal = journal1 });
+            context.PartInformations.Add(new PartInformation { Name = "Spring", Journal = journal1 });
+
+
             base.Seed(context);
         }
     }
